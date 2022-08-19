@@ -1,0 +1,28 @@
+
+.headerContainer {
+    font-family: 'IM Fell English', serif;
+    background: url("../assets/fondoElegante.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    padding: 15px;
+}
+
+.headerContainer .imgHeader img {
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: -8px -8px 3px rgb(100, 100, 100);
+}
+
+.titleHeader {
+    flex: 40%;
+}
+
+.imgHeader {
+    flex: 40%;
+}
