@@ -1,6 +1,5 @@
 import React from 'react'
 import "../styles/Header.css"
-import Typography from '@mui/material/Typography'
 import imagen from "../assets/womanTree.jpg";
 
 const Header = () => {
@@ -8,18 +7,11 @@ const Header = () => {
   return (
     <div className="headerContainer">
       <div className="titleHeader">
-        <Typography variant="h2" color="primary">
-          PLANET BOOK
-        </Typography>
-
-        <Typography variant="h4" color="inherit">
-          Lee y <strong>conducirás</strong>,
-        </Typography>
-
-        <Typography variant="h4" color="inherit">
-          no leas y serás <strong>conducido</strong>.
-        </Typography>
+        <h1>PLANET BOOK</h1>
+        <h3>Lee y conduciras,</h3>
+        <h3>no leas y seras conducido.</h3>
       </div>
+
       <div className="imgHeader">
         <img src={imagen} alt="imagen header" />
       </div>

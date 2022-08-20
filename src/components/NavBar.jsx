@@ -9,9 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import "../styles/NavBar.css"
-
+import CartWidget from "./CartWidget";
 
 
 const pages = ["Sobre Nosotros", "Productos", "Contacto"];
@@ -33,16 +31,15 @@ export default function NavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href=""
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: 'monospace',
+              display: { md: "flex" },
+              fontFamily: 'special elite',
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -87,7 +84,6 @@ export default function NavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -97,7 +93,7 @@ export default function NavBar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "roboto",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -115,7 +111,7 @@ export default function NavBar() {
               </Button>
             ))}
           </Box>
-          🛒
+          <CartWidget />
           
           <Box sx={{ flexGrow: 0 }}></Box>
         </Toolbar>
