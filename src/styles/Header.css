@@ -1,5 +1,4 @@
 .headerContainer {
-    font-family: 'Special Elite', cursive;
     background: url("../assets/fondoElegante.jpg");
     background-size: cover;
     display: flex;
@@ -7,13 +6,13 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     padding: 15px;
 }
 
 .headerContainer .imgHeader img {
-    width: 80%;
+    width: 65%;
     border-radius: 50%;
     box-shadow: -8px -8px 3px rgb(100, 100, 100);
 }
@@ -22,21 +21,23 @@
     flex: 45%;
 }
 
-.titleHeader h1{
+.titleHeader h1 {
+    font-family: 'Special Elite', cursive;
     font-size: 70px;
     margin-bottom: 20px;
 }
-.titleHeader h3{
+
+.titleHeader h3 {
     font-size: 35px;
     margin-bottom: 10px;
-}
-
-.imgHeader{
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    font-style: italic;
+    font-weight:bolder;
 }
 
 .imgHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     flex: 45%;
+    min-width: 400px;
 }

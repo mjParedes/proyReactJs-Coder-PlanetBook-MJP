@@ -14,7 +14,6 @@ import CartWidget from "./CartWidget";
 
 const pages = ["Sobre Nosotros", "Productos", "Contacto"];
 
-
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   
@@ -26,7 +25,6 @@ export default function NavBar() {
     setAnchorElNav(null);
   };
 
- 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
