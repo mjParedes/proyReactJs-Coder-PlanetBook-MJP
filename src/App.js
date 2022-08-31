@@ -15,8 +15,6 @@ function App() {
 
       <ItemListContainer greeting={ greeting } title= { title } />
       
-
-
     </div>
   );
 }

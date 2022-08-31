@@ -1,27 +1,27 @@
-import React from 'react'
-import ItemCount from "./ItemCount"
-// import ItemList from './ItemList'
+import React, { useState, useEffect } from "react";
+import { fetchData } from "../js/fetchData";
+import ItemList from "./ItemList";
+import productos from "../js/productos";
+import "../styles/ItemListContainer.css"
 
-function ItemListContainer( { greeting, title } ) {
-  const stock = 10;
-  const valorInicial = 1;
+function ItemListContainer({ greeting, title }) {
+  const [listProducts, setListProducts] = useState([]);
 
+  useEffect(() => {
+    fetchData(productos)
+      .then((data) => setListProducts(data));
+  }, []);
 
-  const onAdd = (resultado) => {
-    console.log(`Se han comprado ${resultado} unidades `)
-  }
+  console.log(listProducts);
 
-    return (
-      <div style={{textAlign:"center", padding:"20px"}}>
-          <h2>{ greeting }</h2>
-          <h3 style={{margin:"10px"}}>{title}</h3>
-
-          <ItemCount stock={stock} valorInicial={valorInicial} onAdd={onAdd}  />
-
-          {/* <ItemList /> */}
-      </div>
-      
-  )
+  return (
+    <div className="contenedorItems">
+      <h1>{greeting}</h1>
+      <h2>{title}</h2>
+        
+      <ItemList listProducts={listProducts} />
+    </div>
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

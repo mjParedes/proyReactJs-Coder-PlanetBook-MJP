@@ -1,22 +1,16 @@
-import React from 'react'
+import Item from "./Item"
+import "../styles/ItemList.css"
 
-function ItemList() {
-
-    const productos = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([{id:"001", name:"Harry Potter", origen:"UK"}])
-        }, 3000);
-            reject("No se encuentra disponible")
-    })
-    productos.then((prods) => {
-        console.log(prods)
-    })
-  
+const ItemList = ({ listProducts }) => {
     return (
-    <div>
-      
-    </div>
-  )
-}
+        <div className="cardContainer">
+            {listProducts.map((product) => {
+                return (
+                <Item key={product.id} producto={product}/>
+                )
+            })}
+        </div>
+    );
+};
 
 export default ItemList
