@@ -24,11 +24,11 @@ const ItemCount = () => {
 
   return (
     <div>
-      <Button variant="outlined" onClick={increase} size="small">
+      <Button variant="contained" onClick={increase} size="small">
         +
       </Button>
-      <span style={{ padding: "20px" }}>{contador}</span>
-      <Button variant="outlined" onClick={decrease} size="small">
+      <span style={{ padding: "15px" }}>{contador}</span>
+      <Button variant="contained" onClick={decrease} size="small">
         -
       </Button>
       <br /> <br />

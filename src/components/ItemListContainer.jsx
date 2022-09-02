@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { fetchData } from "../js/fetchData";
 import ItemList from "./ItemList";
-import productos from "../js/productos";
+import { data } from "../mocks/DataBase"
 import "../styles/ItemListContainer.css"
 
 function ItemListContainer({ greeting, title }) {
   const [listProducts, setListProducts] = useState([]);
 
   useEffect(() => {
-    fetchData(productos)
-      .then((data) => setListProducts(data));
+   data
+    .then((res) => setListProducts(res))
+    .catch((err) => console.log(err))
   }, []);
 
   console.log(listProducts);
