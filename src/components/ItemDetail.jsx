@@ -9,12 +9,17 @@ import ItemCount from './ItemCount';
 
 
 const ItemDetail = ({ producto }) => {
+  const onAdd=()=>{
+    console.log("agregaste al carrito")
+  }
+
+
   return (
-    <Card sx={{ maxWidth: 280, margin: 5}} align="center">
+    <Card sx={{ maxWidth: 280, margin: 15}} align="center">
       <CardActionArea>
         <CardContent>
-          <Typography variant="h5">
-            Detalle de producto 
+          <Typography variant="h6">
+            DETALLE DE PRODUCTO: {producto.titulo} 
           </Typography>
         </CardContent>
         <CardMedia
@@ -42,7 +47,7 @@ const ItemDetail = ({ producto }) => {
           justifyContent: "center",
         }}
       >
-        <ItemCount />
+        <ItemCount stock={producto.stock} initial={1} onAdd={(onAdd)} />
       </CardActions>
     </Card>
   );

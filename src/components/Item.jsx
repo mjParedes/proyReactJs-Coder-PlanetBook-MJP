@@ -5,11 +5,16 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ItemCount from "./ItemCount";
-import { CardActionArea } from "@mui/material";
+import { Button, CardActionArea } from "@mui/material";
 
 const Item = ({ producto }) => {
+
+  const onAdd= () =>{
+    console.log("has agregado un producto")
+  }
+
   return (
-    <Card sx={{ maxWidth: 320, height: 650, width: 250, align: "center" }}>
+    <Card sx={{ maxWidth: 320, height: 600, width: 250, align: "center" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -34,7 +39,8 @@ const Item = ({ producto }) => {
           justifyContent: "center",
         }}
       >
-        <ItemCount />
+        {/* <ItemCount stock={producto.stock} initial={1} onAdd={(onAdd)} /> */}
+        <Button color="success" variant="contained">VER MAS INFO</Button>
       </CardActions>
     </Card>
   );

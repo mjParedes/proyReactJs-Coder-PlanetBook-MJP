@@ -11,7 +11,6 @@ const Header = () => {
         <h3>Lee y conduciras,</h3>
         <h3>no leas y seras conducido.</h3>
       </div>
-
       <div className="imgHeader">
         <img src={imagen} alt="imagen header" />
       </div>

@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import CartWidget from "./CartWidget";
 
 
-const pages = ["Sobre Nosotros", "Productos", "Contacto"];
+const pages = ["Ofertas", "Nuevos", "Mas vendidos"];
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

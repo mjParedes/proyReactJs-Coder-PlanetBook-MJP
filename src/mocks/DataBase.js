@@ -9,6 +9,7 @@ const productos = [
     img: "https://i.ibb.co/0VMk3v1/aquiles-img.jpg",
     imgAlt: "https://i.ibb.co/XJ4z2FY/aquiles-img.jpg",
     genero: "Narrativa",
+    stock: 12,
   },
   {
     id: "02",
@@ -20,6 +21,7 @@ const productos = [
     img: "https://i.ibb.co/JnMdgqp/padre-img.jpg",
     imgAlt: "https://i.ibb.co/s3wfXyX/padre-img.jpg",
     genero: "Economia",
+    stock: 8,
   },
   {
     id: "03",
@@ -31,6 +33,7 @@ const productos = [
     img: "https://i.ibb.co/XZXKj2v/aniquilacion-img.jpg",
     imgAlt: "https://i.ibb.co/L1khxQx/aniquilacion-img.jpg",
     genero: "Narrativa",
+    stock: 15,
   },
   {
     id: "04",
@@ -42,6 +45,7 @@ const productos = [
     img: "https://i.ibb.co/FBZKsCM/fuegosangre-img.jpg",
     imgAlt: "https://i.ibb.co/QQm17wS/fuegosangre-img.jpg",
     genero: "Fantasia",
+    stock: 11,
   },
   {
     id: "05",
@@ -53,6 +57,7 @@ const productos = [
     img: "https://i.ibb.co/4F3DJMR/psico-img.jpg",
     imgAlt: "https://i.ibb.co/b3CFnvd/psico-img.jpg",
     genero: "narrativa/policial",
+    stock: 14,
   },
   {
     id: "06",
@@ -64,6 +69,7 @@ const productos = [
     img: "https://i.ibb.co/HxcJLDv/strangerth-img.jpg",
     imgAlt: "https://i.ibb.co/zJPjW5m/strangerth-img.jpg",
     genero: "Narrativa",
+    stock: 16
   },
 ];
 

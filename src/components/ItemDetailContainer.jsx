@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
   
   return (
     <div>
-      {loading ? <p>Loading..</p> : <ItemDetail producto={producto} />}
+      {loading ? <h1 style={{textAlign:"center"}}>CARGANDO PRODUCTOS....</h1> : <ItemDetail producto={producto} />}
     </div>
   )
 }
