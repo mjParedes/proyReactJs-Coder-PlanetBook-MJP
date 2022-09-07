@@ -1,120 +1,41 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
+import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import "../styles/NavBar.css"
 import CartWidget from "./CartWidget";
+import logo from "../assets/logoProyReact.png"
 
 
-const pages = ["Ofertas", "Nuevos", "Mas vendidos"];
-
-export default function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
+const NavBar = () => {
+   
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { md: "flex" },
-              fontFamily: 'special elite',
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            PLANET BOOK
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "roboto",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          ></Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-          <CartWidget />
-          
-          <Box sx={{ flexGrow: 0 }}></Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <nav className="navMenu">
+      <Link className="brand" to="/">
+        <img src={logo} alt="logo Brand" width={280} height={60}/>
+      </Link>
+      <ul>
+        <li>
+          <NavLink className="navLink" to="/categoria/nuevos">
+            nuevos
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="navLink" to="/categoria/oferta">
+            ofertas
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="navLink" to="/categoria/vendidos">
+            mas vendidos
+          </NavLink>
+        </li>
+      </ul>
+      <i>
+        <NavLink className="cart" to="">
+          <CartWidget/>
+        </NavLink>
+      </i>
+    </nav>
   );
-};
+}
 
+export default NavBar

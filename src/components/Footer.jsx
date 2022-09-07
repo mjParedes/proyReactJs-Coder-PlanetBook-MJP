@@ -10,7 +10,7 @@ function Footer() {
         textAlign: "center",
       }}
     >
-      <h4>TODOS LOS DERECHOS RESERVADOS MATU-DEVS</h4>
+      <h6>TODOS LOS DERECHOS RESERVADOS MATU-DEVS</h6>
     </div>
   );
 }

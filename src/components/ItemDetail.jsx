@@ -8,48 +8,50 @@ import Typography from "@mui/material/Typography";
 import ItemCount from './ItemCount';
 
 
+
 const ItemDetail = ({ producto }) => {
   const onAdd=()=>{
     console.log("agregaste al carrito")
   }
 
-
   return (
-    <Card sx={{ maxWidth: 280, margin: 15}} align="center">
-      <CardActionArea>
-        <CardContent>
-          <Typography variant="h6">
-            DETALLE DE PRODUCTO: {producto.titulo} 
-          </Typography>
-        </CardContent>
-        <CardMedia
-          component="img"
-          height="400"
-          image={producto.imgAlt}
-          alt={producto.titulo}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {producto.titulo}
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            SINOPSIS: <br /> {producto.detalle}
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
-            Precio: $ {producto.precio}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        <ItemCount stock={producto.stock} initial={1} onAdd={(onAdd)} />
-      </CardActions>
-    </Card>
+    <div>
+      <Card sx={{ maxWidth: 280 }} align="center">
+        <CardActionArea>
+          <CardContent>
+            <Typography variant="h6">
+              DETALLE DE PRODUCTO: {producto.titulo} 
+            </Typography>
+          </CardContent>
+          <CardMedia
+            component="img"
+            height="400"
+            image={producto.img}
+            alt={producto.titulo}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {producto.titulo}
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              SINOPSIS: <br /> {producto.detalle}
+            </Typography>
+            <Typography variant="h6" color="text.secondary">
+              Precio: $ {producto.precio}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <ItemCount stock={producto.stock} initial={1} onAdd={(onAdd)} />
+        </CardActions>
+      </Card>
+    </div>
   );
 }
 
