@@ -1,58 +1,81 @@
-import React from 'react'
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import { CardActionArea } from '@mui/material';
-import CardActions from "@mui/material/CardActions";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import ItemCount from './ItemCount';
-
-
+import React, { useState } from "react";
+import ItemCount from "./ItemCount";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import { Button } from "@mui/material";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 
 const ItemDetail = ({ producto }) => {
-  const onAdd=()=>{
-    console.log("agregaste al carrito")
-  }
+  const [count, setCount] = useState(1);
+  const [compra, setCompra] = useState(false);
+  const { titulo, id, detalle, precio, stock, img } = producto;
+  const navegar = useNavigate();
+  const { addItem } = useCart();
+
+  const onAdd = () => {
+    let purchase = {
+      id,
+      titulo,
+      precio,
+      stock,
+      img,
+      quantity: count,
+    };
+    setCompra(true);
+    addItem(purchase);
+  };
 
   return (
-    <div>
-      <Card sx={{ maxWidth: 280 }} align="center">
-        <CardActionArea>
-          <CardContent>
-            <Typography variant="h6">
-              DETALLE DE PRODUCTO: {producto.titulo} 
-            </Typography>
-          </CardContent>
-          <CardMedia
-            component="img"
-            height="400"
-            image={producto.img}
-            alt={producto.titulo}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {producto.titulo}
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              SINOPSIS: <br /> {producto.detalle}
-            </Typography>
-            <Typography variant="h6" color="text.secondary">
-              Precio: $ {producto.precio}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions
-          sx={{
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "2rem",
+      }}
+    >
+      <h1>Detalle de: {titulo}</h1>
+      <img src={img} alt={titulo} style={{ width: "15rem", margin: "20px" }} />
+      <h4 style={{ margin: "15px" }}>{detalle}</h4>
+      <h3 style={{ margin: "15px" }}>${precio}</h3>
+      {!compra ? (
+        <ItemCount
+          stock={stock}
+          initial={1}
+          onAdd={onAdd}
+          count={count}
+          setCount={setCount}
+        />
+      ) : (
+        <div
+          style={{
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
+            justifyContent: "space-around",
+            alignItems: "center",
           }}
         >
-          <ItemCount stock={producto.stock} initial={1} onAdd={(onAdd)} />
-        </CardActions>
-      </Card>
+          <Button
+            onClick={() => navegar("/")}
+            variant="contained"
+            sx={{ mx: 2 }}
+            endIcon=<LibraryAddIcon />
+          >
+            Seguir Comprando
+          </Button>
+          <Button
+            onClick={() => navegar("/cart")}
+            variant="contained"
+            sx={{ mx: 2 }}
+            endIcon=<MonetizationOnIcon />
+          >
+            Finalizar Compra
+          </Button>
+        </div>
+      )}
     </div>
   );
-}
+};
 
-export default ItemDetail
+export default ItemDetail;

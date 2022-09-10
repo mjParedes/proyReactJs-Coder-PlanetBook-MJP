@@ -31,7 +31,7 @@ function ItemListContainer({ greeting, title }) {
       <h2>{title}</h2>
       {loading ? (
         <SpinnerCircularFixed
-          size={90}
+          size={100}
           thickness={140}
           speed={80}
           color="rgba(25, 118, 210, 1)"

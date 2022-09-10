@@ -13,7 +13,9 @@ const {id,titulo,precio,img,genero,stock}= producto
  const navegar = useNavigate()
 
   return (
-    <Card sx={{ maxWidth: 320, height: 610, width: 250, align: "center" }}>
+    <Card
+      sx={{ maxWidth: 320, height: 610, width: 250, align: "center" }}
+      onClick={() => navegar(`/item/${id}`)}>
       <CardActionArea>
         <CardMedia component="img" height="50%" image={img} alt={titulo} />
         <CardContent>
@@ -23,13 +25,9 @@ const {id,titulo,precio,img,genero,stock}= producto
           <Typography variant="body2" color="text.secondary">
             {genero}
           </Typography>
-          <Typography  variant="body1">
-            Precio: $ {precio}
-          </Typography>
-          <br/>
-          <Typography  variant="body4">
-            Stock: {stock}
-          </Typography>
+          <Typography variant="body1">Precio: $ {precio}</Typography>
+          <br />
+          <Typography variant="body4">Stock: {stock}</Typography>
         </CardContent>
       </CardActionArea>
       <CardActions
