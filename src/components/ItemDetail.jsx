@@ -5,6 +5,7 @@ import { useCart } from "../context/CartContext";
 import { Button } from "@mui/material";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
+import "../styles/ItemDetail.css"
 
 const ItemDetail = ({ producto }) => {
   const [count, setCount] = useState(1);
@@ -27,7 +28,7 @@ const ItemDetail = ({ producto }) => {
   };
 
   return (
-    <div
+    <div className="cardDetail"
       style={{
         display: "flex",
         justifyContent: "center",
@@ -37,9 +38,9 @@ const ItemDetail = ({ producto }) => {
       }}
     >
       <h1>Detalle de: {titulo}</h1>
-      <img src={img} alt={titulo} style={{ width: "15rem", margin: "20px" }} />
-      <h4 style={{ margin: "15px" }}>{detalle}</h4>
-      <h3 style={{ margin: "15px" }}>${precio}</h3>
+      <img src={img} alt={titulo} style={{ width: "18rem", margin: "30px" }} />
+      <h4 style={{ margin: "10px" }}>{detalle}</h4>
+      <h3 style={{ margin: "10px" }}>PRECIO:  $ {precio}</h3>
       {!compra ? (
         <ItemCount
           stock={stock}

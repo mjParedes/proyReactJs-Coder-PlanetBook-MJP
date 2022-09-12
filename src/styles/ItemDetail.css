@@ -1,0 +1,10 @@
+.cardDetail{
+    width:580px;
+    display: flex;
+    border: 3px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    background-image: url("../assets/img/gggrain.svg");
+    background-size:cover;
+    box-shadow: -4px 2px 2px #000
+}

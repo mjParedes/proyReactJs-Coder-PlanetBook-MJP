@@ -11,7 +11,7 @@ El sitio es una SPA(Single Page APlication), por lo cual no necesita "refrescars
 Hasta el momento estoy utilizando MaterialUI para resaltar y estilizar el aspecto visual del sitio, combinandolo con estilos en CSS puro para lograr un aspecto mas personalizado.
 
 ### ROUTING Y NAVEGACION
-Para dicho fin utilizo react-router-dom que agiliza y economiza recursos del sistema y su vez permite brindarle al usuario una experiencia de navegacion mas intuitiva, veloz y agradable.
+Para dicho fin utilizo react-router-dom que agiliza y economiza recursos del sistema y su vez permite brindarle al usuario una experiencia de navegacion mas intuitiva, veloz y agradable.A su vez sumo herramientas como Link y NavLinks reemplazando los vinculos tradicionales.
 
 ### SINTAXIS
 
