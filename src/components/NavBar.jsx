@@ -5,7 +5,10 @@ import CartWidget from "./CartWidget";
 import logo from "../assets/logoProyReact.png"
 
 
+
+
 const NavBar = () => {
+  
    
   return (
     <nav className="navMenu">
@@ -30,8 +33,8 @@ const NavBar = () => {
         </li>
       </ul>
       <i>
-        <NavLink className="cart" to="">
-          <CartWidget/>
+        <NavLink className="cart" to="/cart">
+          <CartWidget />
         </NavLink>
       </i>
     </nav>

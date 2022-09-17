@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { SpinnerCircularFixed } from 'spinners-react'
-import { data } from "../mocks/DataBase"
 import ItemDetail from './ItemDetail'
 import "../styles/ItemDetailContainer.css";
+import { collection, doc, getDoc } from 'firebase/firestore'
+import { db } from '../firebase/firebase'
+// import { data } from "../mocks/DataBase"
+
 
 const ItemDetailContainer = () => {
   const [ producto, setProducto] = useState({})
@@ -11,11 +14,27 @@ const ItemDetailContainer = () => {
   const{ id } = useParams()
 
   useEffect(() => {
-   data
-    .then((res) => setProducto(res.find((item)=> item.id === id)))
-    .catch((err) => console.log(err))
+    const coleccionProductos = collection(db,"productos")
+    const referenciaDoc = doc(coleccionProductos, id)
+
+    getDoc(referenciaDoc)
+    .then((result) =>{
+      setProducto({
+        id:result.id, 
+        ...result.data()})
+    })
+    .catch((error)=> console.log(error))
     .finally(() => setLoading(false))
-  }, [id])
+  },[id])
+
+
+  // mock
+  // useEffect(() => {
+  //  data
+  //   .then((res) => setProducto(res.find((item)=> item.id === id)))
+  //   .catch((err) => console.log(err))
+  //   .finally(() => setLoading(false))
+  // }, [id])
   
   // console.log(producto)
   

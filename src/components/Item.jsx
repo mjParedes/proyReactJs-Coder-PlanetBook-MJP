@@ -4,7 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import ItemCount from "./ItemCount";
+// import ItemCount from "./ItemCount";
 import { Button, CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +39,7 @@ const {id,titulo,precio,img,genero,stock}= producto
       >
         {/* <ItemCount stock={producto.stock} initial={1} onAdd={(onAdd)} /> */}
         <Button
-          color="success"
+          color="error"
           variant="contained"
           onClick={() => navegar(`/item/${id}`)}
         >

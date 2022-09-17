@@ -21,3 +21,7 @@ Mayormente utilizo CamelCase ya que es el metodo que prefiero y elijo para mis p
 
 Tanto para inicializar el proyecto como para ir agregando dependencias y librerias necesarias, utilice el formato NPM.
 
+
+### FIREBASE & DEPENDENCIAS
+
+Empleo Firebase y dependecias para diversas tareas como base de datos, organizacion de proyecto y eventual subida a produccion.
