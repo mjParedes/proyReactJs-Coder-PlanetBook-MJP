@@ -24,4 +24,4 @@ Tanto para inicializar el proyecto como para ir agregando dependencias y libreri
 
 ### FIREBASE & DEPENDENCIAS
 
-Empleo Firebase y dependecias para diversas tareas como base de datos, organizacion de proyecto y eventual subida a produccion.
+Empleo Firebase y dependecias para diversas tareas como base de datos, organizacion de proyecto, eventual subida a produccion entre otros.

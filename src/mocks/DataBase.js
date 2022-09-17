@@ -98,7 +98,7 @@ const productos = [
   {
     id: "09",
     titulo: "CREA TU SITIO WEB CON JOOMLA!",
-    categoria: "nuevos",
+    categoria: "CREA TU SITIO WEB CON JOOMLA!",
     autor: "Cardador Cabello Antonio Luis",
     detalle:
       "Identificar los componentes de los cuales se compone Joomla!, así como su uso para la creación y mantenimiento de sitios web. Analizar los fundamentos tecnológicos de un determinado sitio web ya creado. Enumerar y definir las funciones que realizan cada uno de los componentes en Joomla! clasificando sus funciones y relacionándolo con el resto de componentes para lograr contenidos adecuados.",
