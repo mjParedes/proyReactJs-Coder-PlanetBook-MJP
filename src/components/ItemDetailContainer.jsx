@@ -27,16 +27,6 @@ const ItemDetailContainer = () => {
     .finally(() => setLoading(false))
   },[id])
 
-
-  // mock
-  // useEffect(() => {
-  //  data
-  //   .then((res) => setProducto(res.find((item)=> item.id === id)))
-  //   .catch((err) => console.log(err))
-  //   .finally(() => setLoading(false))
-  // }, [id])
-  
-  // console.log(producto)
   
   return (
     <div className="detailContainer">

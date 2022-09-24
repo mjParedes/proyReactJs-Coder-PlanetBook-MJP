@@ -5,7 +5,7 @@ import { SpinnerCircularFixed } from "spinners-react";
 import { useParams } from "react-router-dom"
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/firebase"
-// import { data } from "../mocks/DataBase"
+
 
 
 function ItemListContainer({ greeting, title }) {
@@ -31,23 +31,6 @@ useEffect(() => {
   .catch((error) => console.log(error))
   .finally(() => setLoading(false))
 }, [categoriaId])
-
-
-
-
-  // mock
-  // useEffect(() => {
-  //   data
-  //     .then((res) => {
-  //       if (categoriaId) {
-  //         setListProducts(res.filter((item) => item.categoria === categoriaId));
-  //       } else {
-  //         setListProducts(res);
-  //       }
-  //     })
-  //     .catch((err) => console.log(err))
-  //     .finally(() => setLoading(false));
-  // }, [categoriaId]);
 
   console.log(listProducts);
 

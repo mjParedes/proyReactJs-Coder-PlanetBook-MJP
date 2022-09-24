@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const navegar = useNavigate()
-  const { cart, emptyCart, cartTotal } = useCart();
+  const { cart, clear, cartTotal } = useCart();
 
 
   return (
@@ -35,10 +35,10 @@ const Cart = () => {
             Total a pagar : $ {cartTotal().toLocaleString()}
           </h3>
           <div>
-            <Button variant="contained" color="success">
+            <Button variant="contained" color="success" onClick={() => navegar("/checkout")}>
               Finalizar compra
             </Button>
-            <Button variant="contained" color="error" onClick={emptyCart}>
+            <Button variant="contained" color="error" onClick={clear}>
               Vaciar carrito
             </Button>
           </div>
