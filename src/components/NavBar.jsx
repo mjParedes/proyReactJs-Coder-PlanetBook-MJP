@@ -4,18 +4,13 @@ import "../styles/NavBar.css"
 import CartWidget from "./CartWidget";
 import logo from "../assets/logoProyReact.png"
 
-
-
-
-const NavBar = () => {
-  
-   
+const NavBar = () => {   
   return (
     <nav className="navMenu">
       <Link className="brand" to="/">
         <img src={logo} alt="logo Brand" width={280} height={60}/>
       </Link>
-      <ul>
+      <ul className='navLinks'>
         <li>
           <NavLink className="navLink" to="/categoria/nuevos">
             nuevos
@@ -32,7 +27,7 @@ const NavBar = () => {
           </NavLink>
         </li>
       </ul>
-      <i>
+      <i className="cartWidget">
         <NavLink className="cart" to="/cart">
           <CartWidget />
         </NavLink>

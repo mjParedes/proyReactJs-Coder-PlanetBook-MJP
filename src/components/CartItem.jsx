@@ -12,7 +12,7 @@ const CartItem = ({ articulo }) => {
       <img src={articulo.img} alt={articulo.titulo} />
       <p>{articulo.titulo}</p>
       <p>{articulo.quantity}</p>
-      <p>$ {articulo.precio.toLocaleString()}</p>
+      <h4>$ {articulo.precio.toLocaleString()}</h4>
       <Button onClick={() => removeItem(articulo.id)} endIcon={<CancelIcon />} size="Medium"></Button>
     </div>
   );

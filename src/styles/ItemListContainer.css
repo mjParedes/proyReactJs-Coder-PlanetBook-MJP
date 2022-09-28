@@ -1,5 +1,6 @@
-.contenedorItems{
+.contenedorItems {
     background-image: url("../assets/img/nnnoise.svg");
+    font-family: 'Special Elite', cursive;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,3 +8,4 @@
     text-align: center;
     padding: 20px;
 }
+

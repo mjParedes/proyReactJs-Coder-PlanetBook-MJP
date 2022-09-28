@@ -2,19 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1976d2;
+    background-image: linear-gradient(to right, #e41e58, #e20078, #cf00a0, #a400cb, #313af4);
     padding: 5px 10px;
     color: #ffffff;
-}
-
-.navMenu .brand {
-    font-family: Special Elite, cursive;
-    font-size: 25px;
-    text-decoration: none;
-    color: #ffffff;
-}
-.navMenu .brand:hover{
-    color: violet;
 }
 
 .navMenu ul {
@@ -31,18 +21,59 @@
     margin-right: 50px;
     text-transform: uppercase;
     font-size: 14px;
-    
+
 }
 
 .navMenu ul li .navLink:hover {
     background-color: #fff;
     color: #1976d2;
-    padding:6px;
+    padding: 6px;
     border-radius: 10px;
     font-weight: bold;
 }
 
-.navMenu .cart{
+.navMenu .cart {
     color: #ffffff;
     text-decoration: none;
+}
+
+@media (max-width:680px) {
+    .navMenu {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navMenu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navMenu ul li {
+        margin-bottom: 5px;
+    }
+
+    .navMenu ul li .navLink {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 0 0 100px 0
+    }
+
+    .navMenu .cartWidget {
+        color: #ffffff;
+        text-decoration: none;
+        margin-top: 15px;
+    }
+
+    .navMenu ul li .navLink:hover {
+        background-color: #fff;
+        color: #1976d2;
+        padding: 3px;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
 }

@@ -6,6 +6,8 @@ import { Button } from "@mui/material";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import "../styles/ItemDetail.css"
+import { swalCart } from "../swal/swal";
+
 
 const ItemDetail = ({ producto }) => {
   const [count, setCount] = useState(1);
@@ -25,6 +27,8 @@ const ItemDetail = ({ producto }) => {
     };
     setCompra(true);
     addItem(purchase);
+    swalCart(count)
+    
   };
 
   return (
@@ -69,7 +73,7 @@ const ItemDetail = ({ producto }) => {
             onClick={() => navegar("/cart")}
             variant="contained"
             sx={{ mx: 2 }}
-            endIcon=<MonetizationOnIcon />
+            endIcon={<MonetizationOnIcon />}
           >
             Finalizar Compra
           </Button>

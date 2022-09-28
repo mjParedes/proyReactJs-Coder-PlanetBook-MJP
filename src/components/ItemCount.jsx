@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@mui/material";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
+
 const ItemCount = ({ stock, initial, onAdd, count,setCount }) => {
   
   const incrementar = () => {
@@ -16,6 +17,7 @@ const ItemCount = ({ stock, initial, onAdd, count,setCount }) => {
     }
   };
 
+ 
   return (
     <div>
       <Button variant="contained" onClick={incrementar} size="small">

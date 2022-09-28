@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
@@ -8,18 +7,21 @@ import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { swalMsg } from "../src/swal/swal"
 
 
 function App() {
-  const greeting = "Bienvenidos a PLANET BOOK";
-  const title = " 📚 Listado de productos 📚 ";
-
+  const greeting = "BIENVENIDOS A PLANET BOOK";
+  const title = " LISTADO DE PRODUCTOS ";
+  swalMsg();
+  
+  
   return (
     <CartProvider>
       <div className="appContainer">
         <BrowserRouter>
           <NavBar />
-          <Header />
+         
           <Routes>
             <Route
               path="/"

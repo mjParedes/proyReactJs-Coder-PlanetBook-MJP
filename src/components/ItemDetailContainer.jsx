@@ -5,7 +5,6 @@ import ItemDetail from './ItemDetail'
 import "../styles/ItemDetailContainer.css";
 import { collection, doc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase/firebase'
-// import { data } from "../mocks/DataBase"
 
 
 const ItemDetailContainer = () => {

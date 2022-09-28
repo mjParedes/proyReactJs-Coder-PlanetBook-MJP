@@ -32,7 +32,7 @@ const Cart = () => {
             <CartItem key={articulo.id} articulo={articulo} />
           ))}
           <h3 style={{ marginBottom: "1.5rem" }}>
-            Total a pagar : $ {cartTotal().toLocaleString()}
+            TOTAL A PAGAR:  $ {cartTotal().toLocaleString()}
           </h3>
           <div>
             <Button variant="contained" color="success" onClick={() => navegar("/checkout")}>

@@ -5,14 +5,17 @@ import { db } from "../firebase/firebase";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import { SpinnerCircularFixed } from "spinners-react";
+import { Button, Typography } from "@mui/material";
 
 const Checkout = () => {
   const [comprador, setComprador] = useState({});
   const [orderId, setOrderId] = useState("");
   const [mensaje, setMensaje] = useState(false);
   const [loader, setLoader] = useState(false);
+  const [ estado, setEstado] = useState("generada")
   const { cart, cartTotal, clear } = useCart();
   const navigate = useNavigate();
+  
   const datosComprador = (e) => {
     setComprador({
       ...comprador,
@@ -22,7 +25,7 @@ const Checkout = () => {
 
   const finalizarCompra = (e) => {
     e.preventDefault();
-    if (Object.values(comprador).length !== 3) {
+    if ((Object.values(comprador).length !== 3)){
       setMensaje(true);
     } else {
       setMensaje(false);
@@ -33,6 +36,7 @@ const Checkout = () => {
         items: cart,
         total: cartTotal(),
         date: serverTimestamp(),
+        state: estado
       })
         .then((res) => {
           setOrderId(res.id);
@@ -64,60 +68,67 @@ const Checkout = () => {
     );
   }
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center" }} >
       {!orderId ? (
         <div
           style={{
             margin: "20px",
+            marginBottom:"240px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <h2>Checkout</h2>
-          <h4>Por favor complete todos los campos</h4>
+          <Typography variant="h3">CHECKOUT</Typography>
+          <Typography variant="h5" sx={{ margin: "10px 0 5px 0" }}>
+            COMPLETA TUS DATOS Y FINALIZA TU COMPRA
+          </Typography>
           <form
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              gap:"5px"
+              gap: "5px",
             }}
             onSubmit={finalizarCompra}
           >
-            <div class="mb-3">
-              <label className="form-label">Nombre Completo</label>
+            <div>
+              <label style={{ marginRight: "8px" }}>Nombre Completo</label>
               <input
-                className="form-control"
                 type="text"
-                placeholder="Nombre y Apellido"
+                placeholder="Santiago Bernabeú"
                 name="name"
                 onChange={datosComprador}
               />
             </div>
-            <div class="mb-3">
-              <label className="form-label">Numero de telefono</label>
+            <div>
+              <label style={{ marginRight: "8px" }}>Numero de telefono</label>
               <input
-                className="form-control"
                 type="number"
-                placeholder="011587892545"
+                placeholder="1109122018"
                 name="phone"
                 onChange={datosComprador}
               />
             </div>
-            <div class="mb-3">
-              <label className="form-label">E-mail</label>
+            <div>
+              <label style={{ marginRight: "8px" }}>E-mail</label>
               <input
-                className="form-control"
                 type="email"
-                placeholder="pepe@gmail.com"
+                placeholder="yvaeltercero@gmail.com"
                 name="email"
                 onChange={datosComprador}
               />
             </div>
-            <button type="submit">Finalizar Compra</button>
+            <Button
+              variant="contained"
+              color="success"
+              type="submit"
+              sx={{ margin: "20px" }}
+            >
+              Finalizar Compra
+            </Button>
             {mensaje && (
               <p style={{ color: "red" }}>
                 {" "}
@@ -130,6 +141,7 @@ const Checkout = () => {
         <div
           style={{
             margin: "20px",
+            marginBottom:"375px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -138,7 +150,14 @@ const Checkout = () => {
         >
           <h2>Muchas gracias por su compra!</h2>
           <h4>Su orden es: {orderId}</h4>
-          <button onClick={() => navigate("/")}>Volver</button>
+          <Button
+            color="error"
+            sx={{ margin: "20px" }}
+            variant="contained"
+            onClick={() => navigate("/")}
+          >
+            Volver
+          </Button>
         </div>
       )}
     </div>
