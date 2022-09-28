@@ -10,7 +10,7 @@ Este es mi proyecto final para el curso FrontEnd React JS en CoderHouse, a conti
 ___
 
 
-![Alt Text](https://i.postimg.cc/mZV2XbL4/gif-Navigation-min.gif )
+![alt Text](https://i.postimg.cc/mZV2XbL4/gif-Navigation-min.gif )
 
 <br>
 
