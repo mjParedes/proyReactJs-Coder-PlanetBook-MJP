@@ -9,8 +9,19 @@ Este es mi proyecto final para el curso FrontEnd React JS en CoderHouse, a conti
 ## GIF CON NAVEGACION DEL SITIO
 ___
 
+Adjunto gif con navegacion del sitio.
 
-![alt Text](https://i.postimg.cc/mZV2XbL4/gif-Navigation-min.gif )
+- [Gif navegacion](https://i.postimg.cc/mZV2XbL4/gif-Navigation-min.gif)
+
+<br>
+
+## LINK HOSTING DEL PROYECTO
+
+Utilizo Vercel para el host y subida a produccion del sitio, principalmente porque lo considero muy confiable, simple y agil, sumado a que la interaccion con GitHub es muy fluida lo cual es de vital importancia para el mantenimiento y escalabilidad de la aplicacion web.
+
+Aqui abajo adjunto el link del proyecto ya subido a produccion para que puedan navegarlo libremente:
+
+- [Planet Book](https://planetbook-8apq90mxz-mjparedes.vercel.app)
 
 <br>
 
@@ -45,16 +56,24 @@ ___
 ## ESTILOS
 ___
 
-Para la estilizacion de este proyecto utilizo Material UI con sus diversos packages.
-Como complemento tambien utilizo CSS, a modo de personalizar un poco mas los estilos.
+Para la estilizacion del proyecto utilice Material UI, debido a que es un frame muy completo que me permite darle al sitio un aspecto muy profesional, agil e intuitivo para el usuario.
+
+
+
+Comando de instalacion:
 
 `npm i @emotion/react @emotion/styled @mui/material `
+
+- [Material UI ](https://mui.com/)
 
 <br>
 
 ## ICONOS 
 ___
-Utilice iconografia Material Design, con su package de MUI.
+Utilice iconografia Material Design, con su package de MUI, basicamente por la alta variedad y calidad que me brinda esta libreria y para mantener un ambiente homogeneo y agradable en la navegacion del sitio.
+
+
+Comando de instalacion:
 
 `npm i @mui/icons-material `
 
@@ -66,7 +85,12 @@ ___
 
 Para dicho fin utilizo la libreria react-router-dom que agiliza y economiza recursos del sistema y su vez permite brindarle al usuario una experiencia de navegacion mas intuitiva, veloz y agradable.A su vez sumo herramientas como Link y NavLinks reemplazando los vinculos tradicionales.
 
+
+Comando de instalacion:
+
 `npm i react-router-dom`
+
+-[React Router Dom](https://v5.reactrouter.com/web/guides/quick-start)
 
 <br>
 
@@ -77,24 +101,54 @@ Mayormente utilizo CamelCase ya que es el metodo que prefiero y elijo para mis p
 <br>
 
 
-
 ## DATA BASE & BACKEND -- FIREBASE
 ___
-Para este fin utilizo la poderosa herramienta de Firebase.
+Para este fin utilizo la poderosa herramienta de Firebase, sin duda alguna es de las mejores en su rubro, me brinda una base de datos no relacional muy potente y flexible para administrar mis datos del mejor modo.Entre otra de sus bastas herramientas me ofrece un simulador de BACKEND, que es imporante para que el proyecto sea escalable.
+
+
+Comando de instalacion:
 
 `npm i firebase`
 
+- [Firebase](https://console.firebase.google.com/)
+
 <br>
 
-## COMANDOS BASICOS
+## TOASTS & MENSAJES POR PANTALLA
+
+Para este fin elegi la libreria de sweetalert por que la considero una de las mas utiles, agradables y sencillas de implementar.
+
+Comando de instalacion:
+
+`npm i sweetalert2`
+
+- [SweetAlert2](https://sweetalert2.github.io/recipe-gallery/sweetalert2-react.html)
+
+<br>
+
+## COMANDOS BASICOS DEL SITIO
 ___
 
 Crear proyecto.
 
-`npx create-react-app mi-proyecto`
+`npx create-react-app planet-book`
 
 
-Inicio y renderizacion del sitio en el navegador.
+Correr proyecto en el navegador
 
 `npm start`
+
+## RESPOSITORIO 
+
+Claramente para subir el respositorio a la nube utilice GitHub la cual cosidero la mejor aplicacion para la comunidad developer hoy en dia, ya que no solo cuenta con muchisimas herramientas y soluciones tecnicas si no que tambien alberga una comunidad impresionante que ayuda al crecimiento de todos y cada uno de los integrantes.
+
+Abajo comparto repositorio final del proyecto:
+
+- [Repo PlanetBook](https://github.com/mjParedes/proyReactJs-Coder-PlanetBook-MJP.git)
+
+<br>
+
+### ¡¡GRACIAS POR SU TIEMPO!!
+
+
 
